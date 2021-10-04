@@ -1,7 +1,7 @@
 # kafdrop-find
 
+[![Licence](https://img.shields.io/github/license/aldise/kafdrop-find)](https://github.com/aldise/kafdrop-find/blob/main/LICENSE)
 [![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/aldise/kafdrop-find)](https://lgtm.com/projects/g/aldise/kafdrop-find/context:javascript)
-[![Licence](https://img.shields.io/badge/license-WTFPL-green)](http://www.wtfpl.net/txt/copying/)
 
 [NedeJS](https://nodejs.org) script for very basic text lookup in [Kafdrop – Kafka Web UI](https://github.com/obsidiandynamics/kafdrop) messages.
 
@@ -12,12 +12,12 @@ and looks for specified text in the message.
 
 ## Usage
 
-Install dependencies:
+Install dependencies and run the script:
 
-    npm install puppeteer
-    npm install yargs/yargs
+    npm install
+    npm start -- <text-to-search> [<options>]
 
-Launch the script:
+Launch the script directly:
 
     node kafdrop-find.js <text-to-search> [<options>]
 
@@ -38,6 +38,10 @@ To display all available options launch the script without parameters or use opt
 | format        | f          | Message format. "AVRO" for avro message decoding.                                                                                                                                         | `DEFAULT`                                                                                                        | string  |
 
 
+### Default parameters
+
+You can override default parameters in script directly to avoid passing them all the time.
+
 ### Example
 
 To lookup for text "my-message-text" in topic "my-cool-kafka-topic" partitions "0", "1", "2" and "3" on Kafdrop server "my-cool-kafdrop-server.com"
@@ -50,7 +54,7 @@ Result will be the list of partition number and offset followed by direct URL to
     ----- 1:51 http://my-cool-kafdrop-server.com/topic/my-cool-kafka-topic/messages?partition=1&offset=51&count=1&keyFormat=DEFAULT&format=DEFAULT
     {"id":"24c92229-b4f8-48c1-9f94-2c981eeb98ca","created":"2021-08-24T07:02:01.697384692","someAttribute":"my-message-text"}
 
-**Note** that as search term may be passed any part of the message. Like, this example will match the result above too:
+**Note** that as search term may be passed any part of the message. Like, this example will match the result above too (double quotes are escaped with extra double quotes):
 
     node kafdrop-find.js """someAttribute"":""my-message-text""}" -a 4 -u http://my-cool-kafdrop-server.com -t my-cool-kafka-topic
 
