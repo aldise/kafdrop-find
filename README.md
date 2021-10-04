@@ -1,5 +1,8 @@
 # kafdrop-find
 
+[![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/aldise/kafdrop-find)](https://lgtm.com/projects/g/aldise/kafdrop-find/context:javascript)
+[![Licence](https://img.shields.io/badge/license-WTFPL-green)](http://www.wtfpl.net/txt/copying/)
+
 [NedeJS](https://nodejs.org) script for very basic text lookup in [Kafdrop – Kafka Web UI](https://github.com/obsidiandynamics/kafdrop) messages.
 
 It may be helpful if the only access to Kafka messages are via Kafdrop.
@@ -22,17 +25,17 @@ To display all available options launch the script without parameters or use opt
 
 ### Options
 
-|Option                 |Short name                     |Description |Default value|Type
-|-----------------------|-------------------------------|-------------------------------|-------------------------------|-------------------------------
-|debug|d|Debug or verbose mode. Displays debug info and shows browser window while working.|`false`|boolean
-|partition|p|Partition to look into.|`0`|number
-|allPartitions|a|Specifies partition count in topic to look into all of them. If specified, option "partition" is ignored.|<N/A> |number
-|maxCount|c|Max record count to dig. By default from the end of partition or offset if specified. Ignored if both offsets ar set.|`1000`|number
-|startOffset|s|Offset where to start search. Note that search is performed backwards so startOffset must be greater than endOffset and can not exceed current offset. Used with option "partition" only.|Offset for the last message in queue|number
-|endOffset|e|Offset where to stop the search. Note that search is performed backwards so endOffset must be less than startOffset, but can not be less than 0. Used with option "partition" only.|Offset for first message in queue, but not less than 0 or Offset for the last message minus value in `maxCount`.|number
-|kafkaUrl|u|Kafka server URL to to use. Default is test environment.|`http://my-cool-kafdrop-server.com`|string
-|topic|t|Kafka topic where to search in.|`my-cool-kafka-topic`|string
-|format|f|Message format. "AVRO" for avro message decoding.|`DEFAULT`|string
+| Option        | Short name | Description                                                                                                                                                                               | Default value                                                                                                    | Type    |
+|---------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|---------|
+| debug         | d          | Debug or verbose mode. Displays debug info and shows browser window while working.                                                                                                        | `false`                                                                                                          | boolean |
+| partition     | p          | Partition to look into.                                                                                                                                                                   | `0`                                                                                                              | number  |
+| allPartitions | a          | Specifies partition count in topic to look into all of them. If specified, option "partition" is ignored.                                                                                 | <N/A>                                                                                                            | number  |
+| maxCount      | c          | Max record count to dig. By default from the end of partition or offset if specified. Ignored if both offsets ar set.                                                                     | `1000`                                                                                                           | number  |
+| startOffset   | s          | Offset where to start search. Note that search is performed backwards so startOffset must be greater than endOffset and can not exceed current offset. Used with option "partition" only. | Offset for the last message in queue                                                                             | number  |
+| endOffset     | e          | Offset where to stop the search. Note that search is performed backwards so endOffset must be less than startOffset, but can not be less than 0. Used with option "partition" only.       | Offset for first message in queue, but not less than 0 or Offset for the last message minus value in `maxCount`. | number  |
+| kafkaUrl      | u          | Kafka server URL to to use. Default is test environment.                                                                                                                                  | `http://my-cool-kafdrop-server.com`                                                                              | string  |
+| topic         | t          | Kafka topic where to search in.                                                                                                                                                           | `my-cool-kafka-topic`                                                                                            | string  |
+| format        | f          | Message format. "AVRO" for avro message decoding.                                                                                                                                         | `DEFAULT`                                                                                                        | string  |
 
 
 ### Example
@@ -51,6 +54,3 @@ Result will be the list of partition number and offset followed by direct URL to
 
     node kafdrop-find.js """someAttribute"":""my-message-text""}" -a 4 -u http://my-cool-kafdrop-server.com -t my-cool-kafka-topic
 
-## License
-
-This project is licensed under the terms of the [WTFPL](http://www.wtfpl.net/txt/copying/) license.
