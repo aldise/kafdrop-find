@@ -1,7 +1,7 @@
 # kafdrop-find
 
 [![Licence](https://img.shields.io/github/license/aldise/kafdrop-find)](https://github.com/aldise/kafdrop-find/blob/main/LICENSE)
-[![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/aldise/kafdrop-find)](https://lgtm.com/projects/g/aldise/kafdrop-find/context:javascript)
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
 
 [NedeJS](https://nodejs.org) script for very basic text lookup in [Kafdrop – Kafka Web UI](https://github.com/obsidiandynamics/kafdrop) messages.
 
