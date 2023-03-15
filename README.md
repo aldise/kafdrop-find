@@ -1,6 +1,8 @@
 # kafdrop-find
 
 [![Licence](https://img.shields.io/github/license/aldise/kafdrop-find)](https://github.com/aldise/kafdrop-find/blob/main/LICENSE)
+[![CodeQL](https://github.com/aldise/kafdrop-find/workflows/CodeQL/badge.svg)](https://github.com/aldise/kafdrop-find/actions?query=workflow%3ACodeQL "Code quality workflow status")
+[![Known Vulnerabilities](https://snyk.io/test/github/aldise/kafdrop-find/badge.svg?targetFile=package.json)](https://snyk.io/test/github/aldise/kafdrop-find?targetFile=package.json "Snyk vulnerabilities")
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
 
 [NedeJS](https://nodejs.org) script for very basic text lookup in [Kafdrop – Kafka Web UI](https://github.com/obsidiandynamics/kafdrop) messages.
