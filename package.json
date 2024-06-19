@@ -1,10 +1,10 @@
 {
   "name": "kafdrop-find",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NedeJS script for very basic text lookup in Kafdrop (Kafka Web UI) messages.",
   "main": "kafdrop-find.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: teste are not available\" && exit 1",
     "start": "node kafdrop-find.js"
   },
   "repository": {
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/aldise/kafdrop-find#readme",
   "dependencies": {
-    "puppeteer": "^19.7.5",
-    "yargs": "github:yargs/yargs"
+    "puppeteer": "^22.11.2",
+    "yargs": "^17.7.2"
   }
 }

@@ -7,7 +7,7 @@
 
 [NedeJS](https://nodejs.org) script for very basic text lookup in [Kafdrop – Kafka Web UI](https://github.com/obsidiandynamics/kafdrop) messages.
 
-It may be helpful if the only access to Kafka messages are via Kafdrop.
+It may be helpful if the access to Kafka messages is via Kafdrop only, and usage of, for example, [Offset Explorer](https://www.kafkatool.com/) is not possible.
 It takes a lot of pain to lookup for needed keyword manually in the browser.
 So, this script does the clicking for You by using [Puppeteer (Headless Chrome Node.js API)](https://github.com/puppeteer/puppeteer)
 and looks for specified text in the message.
