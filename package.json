@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/aldise/kafdrop-find#readme",
   "dependencies": {
-    "puppeteer": "^19.7.5",
+    "puppeteer": "^22.11.2",
     "yargs": "github:yargs/yargs"
   }
 }
